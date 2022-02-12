@@ -28,7 +28,7 @@ Use NHIICC (健保卡憑證元件) in Container.  Podman for example.
   Bus 001 Device 007: ID 058f:9520 Alcor Micro Corp. Watchdata W 1981
   ```
   The device **007** locates on the USB bus **001**.
-* Make the container share the same network stack with host.
+* Make the container [share the same network stack](https://hackmd.io/@starnight/share-hosts-network-stack-with-container) with host.
 * Run the container as a deamon:
   ```sh
   podman run -dt --rm --network=host --device=/dev/bus/usb/001/007 --name nhiicc-container localhost/nhiicc-tool
